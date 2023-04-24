@@ -1,0 +1,55 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("FAME X HUB", "Synapse")
+
+--MAIN
+
+local MAIN = Window:NewTab("MAIN")
+
+local MainSection = MAIN:NewSection("MAIN")
+
+MainSection:NewButton("Infinite Yield", "Have Fun :)", function()
+
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+end)
+
+MainSection:NewButton("Infinite Jump", " Hold Down Jump For It To Work Also You Are Now A Rocket Or Plane :)", function()
+
+    
+
+local InfiniteJumpEnabled = true
+
+game:GetService("UserInputService").JumpRequest:connect(function()
+
+    if InfiniteJumpEnabled then
+
+        game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+
+    end
+
+end)
+
+game.StarterGui:SetCore("SendNotification", {
+
+    Title = "Infinite Jump script ";
+
+    Text = "Made by wsp g#1923 and R3B0RN#3120"; -- what the text says (ofc)
+
+    Duration = 30;
+
+})
+
+wait(1)
+
+game.StarterGui:SetCore("SendNotification", {
+
+    Title = "Successfully Executed FAME X V2";
+
+    Text = "Don't Forget to Subscribe to R3B0RN-C0D3R and Vampz4444"; -- what the text says (ofc)
+
+    Duration = 30;
+
+})
+
+end)
